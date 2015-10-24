@@ -9,7 +9,7 @@ angular.module('app.controllers', [])
 	  $localstorage.set('isFirst', 'false');
   }else{
 	  
-      console.log('최초실행X');
+      console.log('최초실행X');  
   }
   //var d = new Date();
   //console.log(''+d.getFullYear()+(d.getMonth() + 1)+d.getDate()+d.getHours()+d.getMinutes()+d.getSeconds());
