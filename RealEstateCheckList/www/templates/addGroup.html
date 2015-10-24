@@ -1,0 +1,43 @@
+<ion-view title="addGroup">
+    <ion-content padding="false" class="has-header">
+        <form name="form" ng-model="form">
+            <label class="item item-input" name="groupName" > 
+                <span class="input-label">이름</span>
+                <input type="text" placeholder="그룹 이름을 입력해 주세요." ng-model="data.inputGroupName">
+            </label>
+            <div class="list">
+
+                <button class="button button-icon icon ion-camera" ng-click="takePicture()"></button> 
+            
+		  <label class="item item-input item-select" name="type"  >
+            <div class="input-label">
+              유형
+            </div>		  
+		  <select name="typeSelect" id="typeSelect"
+					ng-options="option.name for option in data.typeSelect track by option.value"
+					ng-model="data.selectedTypeOption"></select>
+		  </label>
+		  
+		  <label class="item item-input item-select" >
+            <div class="input-label">
+              거래구분
+            </div>		 
+			<select name="gubunSelect" id="gubunSelect"
+					ng-options="option.name for option in data.gubunSelect track by option.value"
+					ng-model="data.selectedGubunOption"></select>
+		  </label>
+		  
+		  
+		  
+        </div>
+        <button class="button  button-positive "  ng-click="addItem(form)" >목록저장</button>   <!-- html5 indexeddb 저장 로직 추가 해야 되는부분(저위에 설정한 값을 어케 받아오는지 모르겠음  -->       
+        		
+    </form>
+
+    </ion-content>
+		<div class="bar bar-footer button-bar" >
+		<!--<a class="button button-full button-positive   icon ion-android-add" href="#/groupList/addGroup" ></a>-->
+         
+          
+		</div>
+</ion-view>
